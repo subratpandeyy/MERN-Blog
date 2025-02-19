@@ -7,7 +7,7 @@ export default function Header() {
     <nav>
         <div className="container nav-container">
             <Link className="nav-logo" to={"/"}>
-                <h3>HackForce <span>Academy</span></h3>
+                <h3>S<span>c</span>ribbles </h3>
             </Link>
             <ul className="nav-menu">
                 <li><Link to={'/profile'}>Profile</Link></li>
