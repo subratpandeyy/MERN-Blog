@@ -7,6 +7,7 @@ export default function AuthorPosts() {
   const [posts, setPosts] = useState(DummyPosts);
   return (
     <section className="authorPosts">
+      <h1 className="Page-title">Author Posts</h1>
       { posts.length > 0 ?
       <div className="container authorPosts-container">
         {posts.map(({ id, Image, authorId, category, title, des }) => (

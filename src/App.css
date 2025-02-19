@@ -92,14 +92,13 @@ section {
     width: fit-content;
     padding: .6rem 1.2rem;
     border-radius: var(--border-radius-2);
-    background: var(--color-white);
+    background: var(--color-gray-900);
     font-weight: 500;
     cursor: pointer;
     transition: var(--transition);
 }
 
 .btn-primary{
-    background: var(--color-primary);
     color: var(--color-white);
 }
 
@@ -121,8 +120,8 @@ section {
 }
 
 .btn:hover {
-    background: var(--color-gray-900);
-    color: var(--color-white);
+    background: var(--color-light);
+    color: var(--color-gray-900);
     transition: var(--transition);
 }
 
@@ -237,6 +236,27 @@ footer{
     grid-template-columns: repeat(3,1fr);
     gap: 4rem;
 }
+.head-post-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding-top: 2.5rem;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+.head-post-container h1{
+    margin-bottom: 1.7rem;
+    font-size: 2.4rem;
+    line-height: 1.4;
+}
+.head-post-container p {
+    font-size: 17px;
+    line-height: 1.5;
+}
+.head-post-container .post-image{
+    height: fit-content;
+}
+
 .post {
     background: var(--color-white);
     padding: 1rem;
@@ -293,10 +313,11 @@ footer{
 .postdetil-top{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1.6rem;
+    margin-bottom: 2rem;
 }
 .postdetail-buttons {
     display: flex;
+    float: right;
     align-items: center;
     gap: 1rem;
 }
@@ -310,8 +331,13 @@ footer{
     margin-bottom: 0.7rem;
 }
 
-.authorPosts-container {
+.authorPosts-container, .categoryPosts-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
+}
+
+.Page-title {
+    text-align: center;
+    margin: 4rem auto;
 }

@@ -5,12 +5,16 @@ import { useState } from "react";
 
 // Import components
 import PostItem from "./PostItem";
+import Headpost from "./HeadPost";
 
 export default function Posts() {
   const [posts, setPosts] = useState(DummyPosts);
 
   return (
     <section className="posts">
+      <div className="head-posts-area">
+        <Headpost />
+      </div>
       { posts.length > 0 ?
       <div className="container posts-container">
         {posts.map(({ id, Image, authorId, category, title, des }) => (

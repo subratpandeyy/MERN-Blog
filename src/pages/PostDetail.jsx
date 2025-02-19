@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import PostAuthor from '../components/PostAuthor'
 
 
-import postDetailImage from '../assets/1.jpg'
+import postDetailImage from '../../src/assets/1.jpg'
 
 
 export default function PostDetail() {
