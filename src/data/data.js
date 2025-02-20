@@ -51,3 +51,27 @@ export const DummyPosts = [
 
     },
 ]
+
+import AuthorImage1 from '../assets/a1.jpg'
+
+export const DummyAuthor = [
+    {
+        id: 1,
+        Image: AuthorImage1,
+        name: 'Subrat Pandey',
+        posts: 2,
+    },
+    {
+        id: 2,
+        Image: AuthorImage1,
+        name: 'Priyanshu Gupta',
+        posts: 6,
+    },
+    {
+        id: 3,
+        Image: AuthorImage1,
+        name: 'Sonali Subhadarshini Sahoo',
+        posts: 3,
+    },
+    
+]
