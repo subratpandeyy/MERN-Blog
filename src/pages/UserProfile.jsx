@@ -23,7 +23,7 @@ export default function UserProfile() {
 
   return (
     <section className='profile'>
-      <div className="container profile-container">
+      <div className="container form-container profile-container">
         <Link to={'/myposts/id'}> My Posts </Link>
         <div className="profile-details">
           <div className="profile-wrapper">

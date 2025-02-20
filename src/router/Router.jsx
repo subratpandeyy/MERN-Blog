@@ -30,7 +30,7 @@ export default function Router() {
         <Route path="/posts/categories/:category" element={<CategoryPosts />}/>
         <Route path="/create" element={<CreatePosts />}/>
         <Route path="/myposts/:id" element={<Dashboard />}/>
-        {/* <Route path="/" element={<DeletePost />}/> */}
+        <Route path="/posts/:id/delete" element={<DeletePost />}/>
         <Route path="/posts/:id/edit" element={<EditPost />}/>
         <Route path="/login" element={<Login />}/>
         <Route path="/logout" element={<Logout />}/>

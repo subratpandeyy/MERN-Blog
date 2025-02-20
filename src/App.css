@@ -343,6 +343,10 @@ footer{
 }
 
 /* Start sign up*/
+.form-container {
+    width: 50%;
+}
+
 form {
     display:flex;
     flex-direction:column;
@@ -366,17 +370,15 @@ input, select , textarea{
     border-radius:var(--border-radius-1)
     
 }
-.form-container{
-    width:50%;
-}
 
 .form-container h2{
     margin-bottom:2rem;
+    text-align: center;
 }
 
 .form-container small{
     margin-top:1.5rem;
-    dispaly:block;
+    display: block;
 }
 
 .form-container small a{
@@ -418,9 +420,7 @@ input, select , textarea{
 
 
 /* Profile area */
-.profile-container form {
-    width: 50%;
-}
+
 .profile-container a{
     display: block;
     width: fit-content;
@@ -479,4 +479,193 @@ input, select , textarea{
     padding: .1rem;
     border-radius: 50%;
     display: flex;
+}
+
+/* dashboard container */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+.dashboard-post{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: var(--color-white);
+    padding: .7rem 1.2rem;
+    border-radius: var(--border-radius-2);
+}
+.dashboard-post-info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.dashboard-post-image {
+    width: 5rem;
+    border-radius: var(--border-radius-2);
+    overflow: hidden;
+}
+.dashboard-posts-action {
+    display: flex;
+    gap: 1rem;
+}
+.dashboard-posts-action .btn-V {
+    background: var(--color-light);
+    color: var(--color-gray-900);
+}
+.dashboard-posts-action .btn-V:hover {
+    background: var(--color-gray-900);
+    color: var(--color-light);
+}
+
+/* quill */
+.ql-editor {
+    overflow: scroll;
+    background: var(--color-white);
+    height: 10rem !important;
+}
+
+
+/* Media queries */
+
+@media (max-width: 1024px) {
+    h1{
+        font-size: 1.5rem !important;
+    }
+    h2{
+        font-size: 1.4rem !important;
+    }
+
+    /* nav bar */
+    .nav-container{
+        position: relative;
+        height: 100%;
+    }
+    .nav-menu {
+        position: absolute;
+        top: 5rem;
+        display: flex;
+        gap: 0;
+        right: 0;
+        flex-direction: column;
+        perspective: 400px;
+    }
+    .nav-menu li {
+        width: 100%;
+        box-shadow: -2rem 4rem 4rem rgba(0,0,0,0.26);
+        animation: NavAni forwards 500ms ease;
+        opacity: 0;
+        transform: rotateY(90deg);
+        transform-origin: top-right;
+    }
+    .nav-menu li a{
+        display: block;
+        background: var(--color-primary);
+        padding: 1.4rem 4.2rem;
+    }
+    .nav-toggle-button {
+        display: inline-block;
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+
+    .categoryPosts-container {
+        grid-template-columns: 1fr;
+    }
+
+    .head-post-container .post-image {
+        height: fit-content;
+        border: 1.4rem solid var(--color-white);
+        box-shadow: 0 1.5rem 2rem rgba(0,0,0,0.1);
+    }
+    .head-post-container .post-image img {
+        border-radius: var(--border-radius-3);
+    }
+
+    /* home */
+
+    .head-post-container {
+        gap: 2rem;
+    }
+    .posts-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 2em;
+    }
+
+    .authorPosts-container{
+        gap: 2em;
+    }
+    .postdetail-container {
+        width: 70%;
+    }
+
+    .form-container{
+        width: 70%;
+    }
+    .author-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .dashboard-post{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    
+}
+
+@keyframes NavAni {
+    to{
+        opacity: 1;
+        transform: rotateY(0);
+    }
+}
+.nav-menu li:nth-child(2) {
+    animation-delay: 200ms;
+}
+.nav-menu li:nth-child(3) {
+    animation-delay: 400ms;
+}
+.nav-menu li:nth-child(4) {
+    animation-delay: 600ms;   
+}
+.nav-menu li:nth-child(5) {
+    animation-delay: 800ms;   
+}
+
+
+
+@media (max-width: 600px) {
+    .head-post-container {
+        grid-template-columns: 1fr;
+    }
+    .head-post-container .post-image{
+        grid-row: 1;
+        
+    }
+    .posts-container {
+        grid-template-columns: 1fr;
+    }
+
+    .head-post-container h1 {
+        font-size: 2rem !important;
+    }
+    .authorPosts-container{
+        grid-template-columns: 1fr;
+    }
+    .postdetail-container {
+        width: 90%;
+        background: transparent;
+        padding: 0;
+    }
+
+    .form-container{
+        width: 90%;
+    }
+    .author-container {
+        grid-template-columns: 1fr ;
+        gap: 1rem;
+    }
 }
